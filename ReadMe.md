@@ -1,1 +1,1 @@
-## In this file you can find most commonly asked coding problems during interviews.
+## In this repository you will get most commonly asked coding problems during interviews.
