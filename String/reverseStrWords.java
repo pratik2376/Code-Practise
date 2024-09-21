@@ -15,9 +15,29 @@ public class reverseStrWords {
 
     }
 
+public void reverseEachWordContent(){
+    String input = "My name is Test";
+
+    String[] array = input.split("\\s");
+
+    StringBuilder output = new StringBuilder();
+
+    System.out.println("Array length is "+array.length);
+
+
+    for(String a:array){
+        String result = new StringBuilder(a).reverse().toString();
+        output.append(result+" ");
+    }
+    
+
+    System.out.println("Reversed words are - "+output.toString());
+}
+
     public static void main(String[] args){
         reverseStrWords obj = new reverseStrWords();
         obj.reverseWordLogic();
+        // obj.reverseEachWordContent();
     }
     
 }

@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 public class removeDuplicateFromStr {
 
     public void removeDuplicateLogic(){
@@ -27,10 +29,24 @@ public class removeDuplicateFromStr {
         System.out.println("String with no duplicate values - "+ output.toString());
     }
 
+    public void usingHashSet(){
+        String input = "PRRRRRRRRRRRRAAAAAAAAAAAAAAAAAAAATTTTTTTTTTTTTTTIIIIIIIIIKKKKKK";
+        char[] a=input.toCharArray();
+
+        HashSet <Character> obj=new HashSet<>();
+        for(char x:a){
+            obj.add(x);
+        }
+
+        System.out.println("String aftr removing duplicates"+obj.toString());
+
+    }
+
 
     public static void main(String[] args){
         removeDuplicateFromStr obj = new removeDuplicateFromStr();
-        obj.removeDuplicateLogic();
+        // obj.removeDuplicateLogic();
+        obj.usingHashSet();
     }
     
 }

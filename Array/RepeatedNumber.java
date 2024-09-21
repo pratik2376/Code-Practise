@@ -1,6 +1,6 @@
 package Array;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class RepeatedNumber{
 
@@ -17,7 +17,12 @@ public class RepeatedNumber{
             }
 
         }
-        System.out.println(obj);
+        System.out.println("Duplicate Numbers are - ");
+        for(Map.Entry<Integer,Integer> entry :obj.entrySet()){
+            if(entry.getValue()>1){
+                System.out.println(entry.getKey()+" "+"count is "+entry.getValue());
+            }
+        }
         
     }
     

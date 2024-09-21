@@ -1,3 +1,7 @@
+import java.util.HashMap;
+import java.util.Map;
+
+
 public class DuplicateCharactersWithForLoops {
 
     public static void findDuplicates() {
@@ -39,8 +43,36 @@ public class DuplicateCharactersWithForLoops {
         }
     }
 
+    public void usingHashMap(){
+        String input = "tessttt";
+
+        HashMap<Character,Integer> obj = new HashMap<>();
+        
+
+        System.out.println("Duplicate characters are = ");
+
+        char[] a= input.toCharArray();
+        for(char x:a){
+            if(obj.containsKey(x)){
+                obj.put(x, obj.get(x)+1);
+            }
+            else{
+                obj.put(x, 1);
+            }
+        }
+        System.out.println(obj);
+        for (Map.Entry<Character,Integer> entry : obj.entrySet()) {
+            if (entry.getValue() > 1) {
+                System.out.println(entry.getKey());
+            }
+        }
+        
+        
+    }
+
     public static void main(String[] args) {
         DuplicateCharactersWithForLoops obj = new DuplicateCharactersWithForLoops();
-        obj.findDuplicates();
+        // obj.findDuplicates();
+        obj.usingHashMap();
     }
 }

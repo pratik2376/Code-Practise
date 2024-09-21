@@ -1,4 +1,5 @@
 package Array;
+import java.util.*;
 
 public class largestNumberInArray {
     
@@ -25,9 +26,21 @@ public class largestNumberInArray {
         // Print the largest element
         System.out.println("The largest element in the array is: " + largest);
     }
+
+    public void usingSort(){
+        int[] numbers = {10, 25, 14, 32, 50, 8, 30};
+
+        Arrays.sort(numbers);
+
+        int maxNumber = numbers[numbers.length-1];
+
+        System.out.println("MAx number is - "+ maxNumber);
+
+    }
     
     public static void main(String[] args) {
         largestNumberInArray obj =new largestNumberInArray();
-        obj.largeNumberLogic();
+        // obj.largeNumberLogic();
+        obj.usingSort();
     }
 }

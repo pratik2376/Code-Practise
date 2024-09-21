@@ -2,15 +2,13 @@ public class numberOfWordInStr {
 
     public void logicTocalculateNumberOfWords(){
 
-        String input = "I am learning new things";
-        int count = 1;
+        String input = "hello how are you";
+        int count = 0;
 
-        for(int i=0; i<input.length()-1;i++){
-            if((input.charAt(i)==' ')&& (input.charAt(i+1)!=' ')){
-                count++;
-            }
-        }
-        System.out.println("The word count is - " + count);
+        String[] words =input.split("\\s");
+        int wordCount=input.isEmpty()?0:words.length;
+
+        System.out.println("The word count is - " + wordCount);
     }
     
     public static void main(String[] args){

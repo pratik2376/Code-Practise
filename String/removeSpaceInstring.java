@@ -2,14 +2,10 @@ public class removeSpaceInstring {
 
     public void removSpaceLogic(){
 
-        String input = "Hello World how Are you   ";
+        String input = "Hello World how Are you   is";
 
-        for(int i=0;i<input.length()-1;i++){
-            if(input.charAt(i)==' '){
-                input = new StringBuilder(input).deleteCharAt(i).toString();
-            }
-        }
-        System.out.println("Final String is: "+" "+input);
+        String output = input.replaceAll("\\s", "");
+        System.out.println("Final String is: "+" "+output);
 
     }
 
