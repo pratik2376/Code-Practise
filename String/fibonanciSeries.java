@@ -10,7 +10,7 @@ public class fibonanciSeries {
             a = b;
             b = nextTerm;
         }
-    }
+    } 
 
     public static void main(String[] args){
         fibonanciSeries obj = new fibonanciSeries();
