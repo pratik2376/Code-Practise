@@ -35,6 +35,7 @@ public class CountCapitalLetters {
         Matcher obj2 = obj.matcher(input);
         System.out.println("capital letters are: ");
         while(obj2.find()){
+            System.out.println(obj2.group());
             count ++;
         }
         System.out.println(count);
