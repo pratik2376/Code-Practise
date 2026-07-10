@@ -29,6 +29,42 @@ public class firstRepeatingNumber {
             }
         }
     }
+    public void logic2(){
+        int a[] = {2,3,2,3,4};
+
+        HashSet<Integer> obj = new HashSet<>();
+
+        for(int i:a){
+            if(obj.add(i)){
+                System.out.println("Element added");
+            }
+            else{
+                System.out.println("First Repeating number is - "+i);
+                break;
+            }
+            
+
+        }
+
+     }
+
+     public void logic3(){
+
+        int a[] = {2,3,2,4,3};
+
+        HashSet<Integer> obj = new HashSet<>();
+
+        for(int f: a){
+            if(obj.add(f)){
+                System.out.println("Element Added");
+            }
+            else{
+                System.out.println("First repeating number - "+f);
+                break;
+            }
+        }
+     }
+ 
     public static void main(String[] args) {
         
     //     int[] arr = {1,2,3,1,3,5,6,7 };
@@ -46,7 +82,7 @@ public class firstRepeatingNumber {
     //     }
 
     firstRepeatingNumber obj  = new firstRepeatingNumber();
-    obj.logic();
+    obj.logic3();
      }
 
 }

@@ -39,12 +39,44 @@ public class serateOutCharAndNumFrmStr {
             System.out.println(matcher3.group()+ " ");
             
         }
+
+    
+    }
+    public void logic(){
+
+        String input = "Hello2345#@$";
+
+        Pattern pattern = Pattern.compile("\\d");
+        Pattern pattern2 = Pattern.compile("[a-zA-Z]");
+        Pattern pattern3 = Pattern.compile("[^a-zA-Z0-9]");
+
+        Matcher matcher = pattern.matcher(input);
+        Matcher matcher2 = pattern2.matcher(input);
+        Matcher matcher3 = pattern3.matcher(input);
+
+        System.out.println("Numbers are - ");
+        while (matcher.find()) {
+            System.out.println(matcher.group()+" ");
+            
+        }
+
+        System.out.println("Characters are - ");
+        while (matcher2.find()) {
+            System.out.println(matcher2.group()+" ");
+            
+        }
+        System.out.println("Spl Characters are - ");
+        while (matcher3.find()) {
+            System.out.println(matcher3.group()+" ");
+            
+        }
+
     }
 
     public static void main(String[] args){
 
         serateOutCharAndNumFrmStr obj = new serateOutCharAndNumFrmStr();
-        obj.seperationOfNumberChar();
+        obj.logic();
             
     }
     

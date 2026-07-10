@@ -39,24 +39,62 @@ public class findCommonElement {
         
          return commonElements;
      }
+     public void logic(){
+        int a[] = {2,3,2,3,4};
+
+        HashSet<Integer> obj = new HashSet<>();
+
+        for(int i:a){
+            if(obj.add(i)){
+                System.out.println("Element added");
+            }
+            else{
+                System.out.println("Common elements are -"+i);
+            }
+            
+
+        }
+
+     }
+
+      public void logic2(){
+
+        int[] a= {2,3,2,3,4};
+
+        HashSet <Integer> obj = new HashSet<>();
+
+       for(int v:a){
+        if(obj.add(v)){
+            System.out.println("Element added");
+
+        }
+        else{
+            System.out.println("Common Elements are - "+v);
+        }
+       }
+            
+        }
  
      public static void main(String[] args)
      {
          
-         ArrayList<Integer> A
-             = new ArrayList<>(List.of(6, 7, 14, 67, 90));
-         ArrayList<Integer> B
-             = new ArrayList<>(List.of(6, 56, 7, 70));
-         ArrayList<Integer> C
-             = new ArrayList<>(List.of(6, 7));
+        //  ArrayList<Integer> A
+        //      = new ArrayList<>(List.of(6, 7, 14, 67, 90));
+        //  ArrayList<Integer> B
+        //      = new ArrayList<>(List.of(6, 56, 7, 70));
+        //  ArrayList<Integer> C
+        //      = new ArrayList<>(List.of(6, 7));
  
         
-         ArrayList<Integer> ans = commonElements(A, B, C);
+        //  ArrayList<Integer> ans = commonElements(A, B, C);
  
          
-         System.out.print("Common elements are: ");
-         for (int i = 0; i < ans.size(); i++)
-             System.out.print(ans.get(i) + " ");
+        //  System.out.print("Common elements are: ");
+        //  for (int i = 0; i < ans.size(); i++)
+        //      System.out.print(ans.get(i) + " ");
+
+        findCommonElement obj = new findCommonElement();
+        obj.logic2();
      }
     
 }

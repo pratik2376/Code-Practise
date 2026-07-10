@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 
@@ -70,9 +72,30 @@ public class DuplicateCharactersWithForLoops {
         
     }
 
+    public void usingHashSet(){
+
+        String input = "aav";
+
+        HashSet<Character> obj = new HashSet<>();
+        ArrayList<Character> obj2 = new ArrayList<>();
+
+        char[] a = input.toCharArray();
+
+        for(char c:a){
+            if(!obj.add(c)){
+                obj2.add(c);
+            }
+        }
+        System.out.println("Duplicate character are - "+obj2.toString());
+
+    }
+
+
+
     public static void main(String[] args) {
         DuplicateCharactersWithForLoops obj = new DuplicateCharactersWithForLoops();
         // obj.findDuplicates();
-        obj.usingHashMap();
+        // obj.usingHashMap();
+        obj.usingHashSet();
     }
 }

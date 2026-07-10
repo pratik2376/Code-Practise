@@ -10,11 +10,27 @@ public class fibonanciSeries {
             a = b;
             b = nextTerm;
         }
-    } 
+    }
+
+
+    public void logic(){
+        int a = 0;
+        int b = 1;
+
+        System.out.println("Fibonacci series - ");
+
+        for(int i=0;i<10;i++){
+            System.out.println(a + " ");
+            int nextItem = a+b;
+            a = b;
+            b = nextItem;
+        }
+    }
 
     public static void main(String[] args){
         fibonanciSeries obj = new fibonanciSeries();
-        obj.fibonanciSeriesLogic();
+        // obj.fibonanciSeriesLogic();
+        obj.logic();
     }
     
 }

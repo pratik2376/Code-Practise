@@ -13,10 +13,21 @@ public class trverseFirstHalfArray {
             System.out.println(array[j]);
         }
     }
+    public void logic(){
+        int[] a = {2,4,1,4,6,8};
+        System.out.println("Final array is");
+        for(int i=(a.length-1)/2;i>=0;i--){
+            System.out.println(a[i]);
+        }
+
+        for(int i=(a.length-1)/2+1;i<a.length;i++){
+            System.out.println(a[i]);
+        }
+    }
 
     public static void main(String[] args) {
         trverseFirstHalfArray obj = new trverseFirstHalfArray();
-        obj.reverseLogic();
+        obj.logic();
     }
     
 }

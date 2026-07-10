@@ -42,6 +42,21 @@ public class CountCapitalLetters {
 
     }
 
+    public void logic2(){
+        String input = "AAZwwQQ";
+
+        int count = 0;
+
+        Pattern obj = Pattern.compile("[A-Z]");
+        Matcher obj2 = obj.matcher(input);
+
+        System.out.println("Capital letters are - ");
+        while(obj2.find()){
+            System.out.println(obj2.group());
+            count ++;
+        }
+    }
+
     public static void main(String[] args){
         CountCapitalLetters obj = new CountCapitalLetters();
         obj.logic();

@@ -32,11 +32,35 @@ public class StringAnagramChecker {
 
 
     }
+    public void logic2(){
+        String input1 = "madam";
+        String input2 = "adamm";
+
+        if(input1.length() == input2.length()){
+            char[] a = input1.toCharArray();
+            char[] b = input2.toCharArray();
+
+            Arrays.sort(a);
+            Arrays.sort(b);
+
+            if(Arrays.equals(a, b)){
+                System.out.println("Strings are anagram");
+            }
+            else{
+                System.out.println("Srings are not anagram");
+            }
+
+
+        }
+        else{
+            System.out.println("String is not anagram");
+        }
+    }
 
 
     public static void main(String[] args){
         StringAnagramChecker obj = new StringAnagramChecker();
-        obj.logic();
+        obj.logic2();
     }
     
 }

@@ -14,9 +14,23 @@ public class strSwap {
         System.out.println("Here are the swapped strings : Input1 value = "+" "+input1 +" "+" And input2 value = "+ " "+ input2);
     }
 
+    public void logic(){
+        String input = "abc";
+        String input2 = "def";
+
+        String temp = "";
+
+        temp=input;
+        input=input2;
+        input2=temp;
+
+        System.out.println("input is "+input);
+        System.out.println("input2 is "+input2);
+    }
+
     public static void main(String[] args){
         strSwap obj = new strSwap();
-        obj.swapString();
+        obj.logic();
     }
     
 }

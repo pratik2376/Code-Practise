@@ -25,9 +25,24 @@ public class stringSumOfDigit {
 
     }
 
+    public void logic(){
+        String input = "helooe234";
+
+        Pattern pat = Pattern.compile("\\d");
+        Matcher mat = pat.matcher(input);
+        int sum = 0;
+
+        while(mat.find()){
+            String digit = mat.group();
+            sum=sum+Integer.parseInt(digit);
+
+        }
+        System.out.println("sum is - "+sum);
+    }
+
     public static void main(String[] args)
     {
         stringSumOfDigit obj = new stringSumOfDigit();
-        obj.sumDigit();
+        obj.logic();
     }
 }

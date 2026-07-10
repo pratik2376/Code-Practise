@@ -19,9 +19,39 @@ public class sumOfNumbers {
         obj.close();
     }
 
+    public void logic2(){
+
+        int a = 1234;
+        int sum = 0;
+
+        while(a!=0){
+            sum = sum + a%10;
+            a = a/10;
+
+        }
+
+        System.out.println("the sum is - "+ sum);
+    }
+
+    public void logic3(){
+
+        String input = "1234";
+
+        int a = Integer.parseInt(input);
+
+        int sum = 0;
+
+        while(a!=0){
+            sum=sum+a%10;
+            a=a/10;
+        }
+
+        System.out.println("the sum is - "+sum);
+    }
+
     public static void main(String args[]){
         sumOfNumbers obj2 = new sumOfNumbers();
-        obj2.logic();
+        obj2.logic3();
     }
     
 }

@@ -56,9 +56,18 @@ public class strReverse {
 
 
     }
+    public void strReverse1(){
+        String reverse = "heloow";
+
+        for(int i=reverse.length()-1;i>=0;i--){
+            System.out.println(reverse.charAt(i));
+
+        }
+    }
     public static void main(String[] args){
         strReverse obj = new strReverse();
-        obj.reverseLogicWithoutSequence();
-        obj.reverseLogicWithSequence();
+        // obj.reverseLogicWithoutSequence();
+        // obj.reverseLogicWithSequence();
+        obj.strReverse1();
     }
 }
